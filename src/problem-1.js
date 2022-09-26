@@ -7,7 +7,7 @@ function range(x, y) {
 };
 
 const rangeES6 = (x, y) => {
-    return [...Array(y).keys()].filter(val => val >= x);
+    return Array.from({ length: y }, (_, index) => index).filter(value => value >= x);
 };
 
 module.exports = {

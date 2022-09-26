@@ -7,7 +7,7 @@ function sum(list) {
 };
 
 const sumES6 = (list) => {
-    return list.reduce((a, b) => a + b)
+    return list.reduce((a, b) => a + b, 0)
 };
 
 module.exports = {

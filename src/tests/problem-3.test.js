@@ -1,9 +1,16 @@
 const functions = require('../problem-3');
 
-test('Return a motto based on GOT house name', () => {
-    expect(functions.GOT('Stark')).toBe("Winter is Coming")
+test('Return motto based on GOT house name', () => {
+    expect(functions.got('Stark')).toBe("Winter is Coming")
 });
 
-test('Return a motto based on GOT house name', () => {
-    expect(functions.GOTES6('Tully')).toBe("Family, Duty, Honor")
-});
+
+describe('Return a motto based on GOT house name', () => {
+    test("Should return Tully house motto", () => {
+        expect(functions.gotES6('Tully')).toBe("Family, Duty, Honor")
+    });
+
+    test('Should find no house', () => {
+        expect(functions.gotES6('Lothbrook')).toBe('No house with this name')
+    })
+})

@@ -1,9 +1,11 @@
 const wordSearch = require('../problem-5');
 
-test('Checks if a word is in text', () => {
-    expect(wordSearch('IndUstrY')).toBe(true);
-});
+describe("Check if a word is in paragraph", () => {
+    test('Word is in paragraph', () => {
+        expect(wordSearch('IndUstrY')).toBe(true);
+    });
 
-test('Checks if a word is in text', () => {
-    expect(wordSearch('nebezinau')).toBe(false);
-});
+    test('Word is NOT in paragraph', () => {
+        expect(wordSearch('nebezinau')).toBe(false);
+    });
+})

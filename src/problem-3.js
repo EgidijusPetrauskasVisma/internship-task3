@@ -11,7 +11,7 @@ const houses = [
     { name: "Martell", motto: "Unbowed, Unbent, Unbroken" }
 ];
 
-function GOT(house) {
+function got(house) {
     let answer;
     for (let i = 0; i < houses.length; i++) {
         if (houses[i].name === house) {
@@ -21,11 +21,13 @@ function GOT(house) {
     return answer;
 };
 
-const GOTES6 = (house) => {
-    return houses.find(x => x.name === house).motto
+const gotES6 = (house) => {
+    const correctHouse = houses.find(x => x.name === house);
+    if (!correctHouse) return "No house with this name"
+    return correctHouse.motto;
 };
 
 module.exports = {
-    GOT,
-    GOTES6
+    got,
+    gotES6
 };
